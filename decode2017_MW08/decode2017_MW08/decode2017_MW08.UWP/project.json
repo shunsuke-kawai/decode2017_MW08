@@ -2,6 +2,7 @@
   "dependencies": {
     "CommonServiceLocator": "1.3.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Plugin.Beahat": "0.2.3",
     "Prism.Core": "6.3.0",
     "Prism.Forms": "6.3.0",
     "Prism.Unity.Forms": "6.3.0",

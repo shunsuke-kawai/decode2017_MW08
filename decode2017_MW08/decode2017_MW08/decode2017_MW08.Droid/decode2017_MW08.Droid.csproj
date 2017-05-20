@@ -63,6 +63,12 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
+    <Reference Include="Plugin.Beahat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Beahat.0.2.3\lib\MonoAndroid10\Plugin.Beahat.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Beahat.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.Beahat.0.2.3\lib\MonoAndroid10\Plugin.Beahat.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Prism.Core.6.3.0\lib\MonoAndroid10\Prism.dll</HintPath>
     </Reference>

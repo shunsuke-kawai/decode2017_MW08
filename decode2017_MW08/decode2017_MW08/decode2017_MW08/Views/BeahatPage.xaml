@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="decode2017_MW08.Views.BeahatPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="Beahat"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout>
+        <Button Command="{Binding SearchStampCommand}" Text="スキャン開始" />
+        <Label Text="{Binding Uuid}" />
+        <Label Text="{Binding Major}" />
+        <Label Text="{Binding Minor}" />
+        <Label Text="{Binding TxPower}" />
+        <Label Text="{Binding Rssi}" />
+        <Label FontSize="Large" Text="{Binding Distance}" />
+    </StackLayout>
+</ContentPage>

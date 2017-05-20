@@ -6,11 +6,18 @@ namespace decode2017_MW08.ViewModels
 {
     public class CustomIndicatorPageViewModel : BindableBase
     {
-        private bool _isBusy = false;
-        public bool IsBusy
+        private bool _customIsVisible = false;
+        public bool CustomIsVisible
         {
-            get { return _isBusy; }
-            set { SetProperty(ref _isBusy, value); }
+            get { return _customIsVisible; }
+            set { SetProperty(ref _customIsVisible, value); }
+        }
+
+        private bool _normalIsVisible = false;
+        public bool NormalIsVisible
+        {
+            get { return _normalIsVisible; }
+            set { SetProperty(ref _normalIsVisible, value); }
         }
 
 
@@ -19,20 +26,24 @@ namespace decode2017_MW08.ViewModels
 
         }
 
-        /// <summary>
-        /// ボタンタップコマンド
-        /// </summary>
-        ICommand _btnTappedCommand;
-        public ICommand BtnTappedCommand =>
-            _btnTappedCommand ?? (_btnTappedCommand = new Command(ExecuteBtnTappedCommand));
+        ICommand _btnCustomTappedCommand;
+        public ICommand BtnCustomTappedCommand =>
+            _btnCustomTappedCommand ?? (_btnCustomTappedCommand = new Command(ExecuteBtnCustomTappedCommand));
 
-        /// <summary>
-        /// ボタンタップ処理
-        /// </summary>
-        /// <returns></returns>
-        public void ExecuteBtnTappedCommand()
+        public void ExecuteBtnCustomTappedCommand()
         {
-            IsBusy = !_isBusy;
+            CustomIsVisible = !_customIsVisible;
+            NormalIsVisible = false;
+        }
+
+        ICommand _btnNormalTappedCommand;
+        public ICommand BtnNormalTappedCommand =>
+            _btnNormalTappedCommand ?? (_btnNormalTappedCommand = new Command(ExecuteBtnNormalTappedCommand));
+
+        public void ExecuteBtnNormalTappedCommand()
+        {
+            NormalIsVisible = !_normalIsVisible;
+            CustomIsVisible = false;
         }
     }
 }

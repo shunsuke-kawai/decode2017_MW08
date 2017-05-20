@@ -1,11 +1,14 @@
 ﻿using decode2017_MW08.Interfaces;
 using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace decode2017_MW08.Controls
 {
     public partial class CustomIndicator : ContentView
     {
+        private readonly string _htmlPath;
+
         /// <summary>
         /// コンストラクター
         /// </summary>
@@ -13,7 +16,7 @@ namespace decode2017_MW08.Controls
         public CustomIndicator()
         {
             InitializeComponent();
-            webView.Source = DependencyService.Get<IHtmlPath>().GetHtmlPath() + "Sample_Spinner.html";
+            _htmlPath = DependencyService.Get<IHtmlPath>().GetHtmlPath() + "Sample_Spinner.html";
         }
 
         /// <summary>
@@ -26,7 +29,7 @@ namespace decode2017_MW08.Controls
 
             if (propertyName == nameof(IsVisible))
             {
-                webView.Source = DependencyService.Get<IHtmlPath>().GetHtmlPath() + "Sample_Spinner.html";
+                webView.Source = IsVisible ? _htmlPath : null;
             }
         }
     }

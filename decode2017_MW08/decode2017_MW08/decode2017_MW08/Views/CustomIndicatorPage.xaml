@@ -8,7 +8,18 @@
     Title="CustomIndicator"
     prism:ViewModelLocator.AutowireViewModel="True">
     <StackLayout>
-        <Button Command="{Binding BtnTappedCommand}" Text="表示/非表示" />
-        <controls:CustomIndicator IsVisible="{Binding IsBusy}" VerticalOptions="FillAndExpand" />
+        <StackLayout Orientation="Horizontal">
+            <Button Command="{Binding BtnCustomTappedCommand}" Text="CustomIndiCator" />
+            <Button Command="{Binding BtnNormalTappedCommand}" Text="NormalIndiCator" />
+        </StackLayout>
+        <controls:CustomIndicator IsVisible="{Binding CustomIsVisible}" VerticalOptions="FillAndExpand" />
+        <ActivityIndicator
+            IsRunning="{Binding NormalIsVisible}"
+            IsVisible="{Binding NormalIsVisible}"
+            VerticalOptions="CenterAndExpand">
+            <ActivityIndicator.Color>
+                <OnPlatform x:TypeArguments="Color" Android="Gray" />
+            </ActivityIndicator.Color>
+        </ActivityIndicator>
     </StackLayout>
 </ContentPage>

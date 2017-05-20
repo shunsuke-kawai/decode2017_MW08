@@ -113,6 +113,7 @@
     <Compile Include="Effects\ListViewNoHightlightEffect.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Platforms\HtmlPath_Droid.cs" />
+    <Compile Include="Renderers\CustomWebViewRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -92,6 +92,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="WebResources\sample_Spinner.css" />
+    <Content Include="WebResources\sample_Spinner.html" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\PrismMasterDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

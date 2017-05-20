@@ -9,7 +9,7 @@ namespace decode2017_MW08.ViewModels
     {
         private readonly INavigationService _navigationService;
 
-        public List<string> MenuList { get; set; } = new List<string> { "MainPage", "CustomIndicatorPage"};
+        public List<string> MenuList { get; set; } = new List<string> { "MainPage", "CustomIndicatorPage", "GrowImagePage" };
 
         public PrismMasterDetailPageViewModel(INavigationService navigationService)
         {

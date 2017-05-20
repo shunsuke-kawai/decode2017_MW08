@@ -6,50 +6,49 @@
     xmlns:controls="clr-namespace:decode2017_MW08.Controls;assembly=decode2017_MW08"
     xmlns:extensions="clr-namespace:decode2017_MW08.Extensions;assembly=decode2017_MW08"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    prism:ViewModelLocator.AutowireViewModel="True">
+    prism:ViewModelLocator.AutowireViewModel="True"
+    Title="GrowImageGrid">
     <StackLayout>
-        <Label Text="{Binding ImgTapMsg}" />
+        <Label
+            Margin="0,10"
+            FontSize="Large"
+            HorizontalTextAlignment="Center"
+            Text="{Binding ImgTapMsg}" />
         <Grid>
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="雨" />
             </Grid.GestureRecognizers>
             <Image
-                Margin="0,8,0,0"
-                HeightRequest="45"
+                HeightRequest="300"
                 Source="{extensions:ImageResource decode2017_MW08.Images.Rain.png}"
                 VerticalOptions="CenterAndExpand"
-                WidthRequest="45">
-            </Image>
+                WidthRequest="300" />
         </Grid>
         <controls:GrowImageGrid
             AfterAnimation="False"
-            GrowLength="100"
-            GrowScale="0.8">
+            GrowLength="300"
+            GrowScale="0.2">
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="太陽" />
             </Grid.GestureRecognizers>
             <Image
-                Margin="0,8,0,0"
-                HeightRequest="45"
-                Source="{extensions:ImageResource decode2017_MW08.Images.Cloud.png}"
+                HeightRequest="300"
+                Source="{extensions:ImageResource decode2017_MW08.Images.Sun.png}"
                 VerticalOptions="CenterAndExpand"
-                WidthRequest="45">
-            </Image>
+                WidthRequest="300" />
         </controls:GrowImageGrid>
         <controls:GrowImageGrid
             AfterAnimation="True"
-            GrowLength="100"
-            GrowScale="0.8">
+            GrowLength="500"
+            GrowScale="0.2">
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="雲" />
             </Grid.GestureRecognizers>
             <Image
-                Margin="0,8,0,0"
-                HeightRequest="45"
+                HeightRequest="300"
                 Source="{extensions:ImageResource decode2017_MW08.Images.Cloud.png}"
                 VerticalOptions="CenterAndExpand"
-                WidthRequest="45">
-            </Image>
+                WidthRequest="300" />
         </controls:GrowImageGrid>
     </StackLayout>
 </ContentPage>

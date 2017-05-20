@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controls\CustomEditor.cs" />
     <Compile Include="Controls\CustomIndicator.xaml.cs">
       <DependentUpon>CustomIndicator.xaml</DependentUpon>
     </Compile>
@@ -42,12 +43,16 @@
     <Compile Include="Extensions\ImageResourceExtension.cs" />
     <Compile Include="Interfaces\IHtmlPath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CustomEditorPageViewModel.cs" />
     <Compile Include="ViewModels\BeahatPageViewModel.cs" />
     <Compile Include="ViewModels\GrowImagePageViewModel.cs" />
     <Compile Include="ViewModels\CustomIndicatorPageViewModel.cs" />
     <Compile Include="ViewModels\ListViewHasNoHightlightPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\PrismMasterDetailPageViewModel.cs" />
+    <Compile Include="Views\CustomEditorPage.xaml.cs">
+      <DependentUpon>CustomEditorPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BeahatPage.xaml.cs">
       <DependentUpon>BeahatPage.xaml</DependentUpon>
     </Compile>
@@ -147,6 +152,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MasterPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CustomEditorPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -14,7 +14,6 @@
                 <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="雨" />
             </Grid.GestureRecognizers>
             <Image
-                x:Name="imgLinkedIn"
                 Margin="0,8,0,0"
                 HeightRequest="45"
                 Source="{extensions:ImageResource decode2017_MW08.Images.Rain.png}"
@@ -30,7 +29,6 @@
                 <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="太陽" />
             </Grid.GestureRecognizers>
             <Image
-                x:Name="imgLinkedIn"
                 Margin="0,8,0,0"
                 HeightRequest="45"
                 Source="{extensions:ImageResource decode2017_MW08.Images.Cloud.png}"
@@ -46,7 +44,6 @@
                 <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="雲" />
             </Grid.GestureRecognizers>
             <Image
-                x:Name="imgLinkedIn"
                 Margin="0,8,0,0"
                 HeightRequest="45"
                 Source="{extensions:ImageResource decode2017_MW08.Images.Cloud.png}"

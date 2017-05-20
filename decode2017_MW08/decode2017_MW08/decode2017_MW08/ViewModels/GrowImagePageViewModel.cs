@@ -1,8 +1,6 @@
-﻿using Prism.Commands;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Prism.Mvvm;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace decode2017_MW08.ViewModels
 {

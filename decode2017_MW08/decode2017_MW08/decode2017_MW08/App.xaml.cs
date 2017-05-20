@@ -12,13 +12,15 @@ namespace decode2017_MW08
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("NavigationPage/MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync("/PrismMasterDetailPage/NavigationPage/MainPage");
         }
 
         protected override void RegisterTypes()
         {
             Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<PrismMasterDetailPage>();
+            Container.RegisterTypeForNavigation<MasterPage>();
         }
     }
 }

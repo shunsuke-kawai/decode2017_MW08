@@ -26,8 +26,8 @@
         </Grid>
         <controls:GrowImageGrid
             AfterAnimation="False"
-            GrowLength="300"
-            GrowScale="0.2">
+            GrowLength="100"
+            GrowScale="0.8">
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="太陽" />
             </Grid.GestureRecognizers>
@@ -39,7 +39,7 @@
         </controls:GrowImageGrid>
         <controls:GrowImageGrid
             AfterAnimation="True"
-            GrowLength="500"
+            GrowLength="100"
             GrowScale="0.2">
             <Grid.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="雲" />

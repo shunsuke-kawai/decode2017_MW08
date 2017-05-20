@@ -14,7 +14,8 @@ namespace decode2017_MW08.ViewModels
             "MainPage",
             "ListViewHasNoHightlightPage",
             "CustomIndicatorPage",
-            "GrowImagePage"
+            "GrowImagePage",
+            "CustomEditorPage",
         };
 
         public PrismMasterDetailPageViewModel(INavigationService navigationService)

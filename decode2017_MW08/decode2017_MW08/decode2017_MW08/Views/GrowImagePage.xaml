@@ -4,7 +4,55 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:decode2017_MW08.Controls;assembly=decode2017_MW08"
+    xmlns:extensions="clr-namespace:decode2017_MW08.Extensions;assembly=decode2017_MW08"
     xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-    prism:ViewModelLocator.AutowireViewModel="True" >
-    
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout>
+        <Label Text="{Binding ImgTapMsg}" />
+        <Grid>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="雨" />
+            </Grid.GestureRecognizers>
+            <Image
+                x:Name="imgLinkedIn"
+                Margin="0,8,0,0"
+                HeightRequest="45"
+                Source="{extensions:ImageResource decode2017_MW08.Images.Rain.png}"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="45">
+            </Image>
+        </Grid>
+        <controls:GrowImageGrid
+            AfterAnimation="False"
+            GrowLength="100"
+            GrowScale="0.8">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="太陽" />
+            </Grid.GestureRecognizers>
+            <Image
+                x:Name="imgLinkedIn"
+                Margin="0,8,0,0"
+                HeightRequest="45"
+                Source="{extensions:ImageResource decode2017_MW08.Images.Cloud.png}"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="45">
+            </Image>
+        </controls:GrowImageGrid>
+        <controls:GrowImageGrid
+            AfterAnimation="True"
+            GrowLength="100"
+            GrowScale="0.8">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ImgTapCommand}" CommandParameter="雲" />
+            </Grid.GestureRecognizers>
+            <Image
+                x:Name="imgLinkedIn"
+                Margin="0,8,0,0"
+                HeightRequest="45"
+                Source="{extensions:ImageResource decode2017_MW08.Images.Cloud.png}"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="45">
+            </Image>
+        </controls:GrowImageGrid>
+    </StackLayout>
 </ContentPage>

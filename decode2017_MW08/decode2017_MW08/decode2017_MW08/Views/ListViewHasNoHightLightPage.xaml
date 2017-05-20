@@ -15,6 +15,7 @@
         <ListView
             Grid.Column="1"
             HorizontalOptions="FillAndExpand"
+            ItemSelected="ListView_ItemSelected"
             ItemsSource="{Binding ItemsSource}">
             <ListView.Effects>
                 <Effect x:FactoryMethod="Resolve">

@@ -8,5 +8,10 @@ namespace decode2017_MW08.Views
         {
             InitializeComponent();
         }
+
+        private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            (sender as ListView).SelectedItem = null;
+        }
     }
 }

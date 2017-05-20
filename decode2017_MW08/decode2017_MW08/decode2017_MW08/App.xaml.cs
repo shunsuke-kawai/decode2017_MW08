@@ -22,7 +22,7 @@ namespace decode2017_MW08
             Container.RegisterTypeForNavigation<PrismMasterDetailPage>();
             Container.RegisterTypeForNavigation<MasterPage>();
             Container.RegisterTypeForNavigation<GrowImagePage>();
-            Container.RegisterTypeForNavigation<CustomIndicator>();
+            Container.RegisterTypeForNavigation<CustomIndicatorPage>();
         }
     }
 }

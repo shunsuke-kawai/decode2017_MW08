@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="decode2017_MW08.Views.CustomIndicatorPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:decode2017_MW08.Controls;assembly=decode2017_MW08"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="CustomIndicator"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout>
+        <Button Command="{Binding BtnTappedCommand}" Text="表示/非表示" />
+        <controls:CustomIndicator IsVisible="{Binding IsBusy}" VerticalOptions="FillAndExpand" />
+    </StackLayout>
+</ContentPage>

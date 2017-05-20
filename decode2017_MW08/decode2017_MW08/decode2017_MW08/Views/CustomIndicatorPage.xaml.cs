@@ -2,9 +2,9 @@
 
 namespace decode2017_MW08.Views
 {
-    public partial class CustomIndicator : ContentPage
+    public partial class CustomIndicatorPage : ContentPage
     {
-        public CustomIndicator()
+        public CustomIndicatorPage()
         {
             InitializeComponent();
         }

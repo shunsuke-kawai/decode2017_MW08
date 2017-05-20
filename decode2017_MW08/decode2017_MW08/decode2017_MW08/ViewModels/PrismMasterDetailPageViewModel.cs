@@ -9,7 +9,7 @@ namespace decode2017_MW08.ViewModels
     {
         private readonly INavigationService _navigationService;
 
-        public List<string> MenuList { get; set; } = new List<string> { "MainPage"};
+        public List<string> MenuList { get; set; } = new List<string> { "MainPage", "CustomIndicatorPage"};
 
         public PrismMasterDetailPageViewModel(INavigationService navigationService)
         {
@@ -18,7 +18,7 @@ namespace decode2017_MW08.ViewModels
 
         public async Task NavigationPage(string pageName)
         {
-            await _navigationService.NavigateAsync(pageName);
+            await _navigationService.NavigateAsync($"NavigationPage/{pageName}");
         }
     }
 }

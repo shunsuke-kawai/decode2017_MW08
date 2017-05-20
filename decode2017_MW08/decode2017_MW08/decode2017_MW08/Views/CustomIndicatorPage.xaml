@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="decode2017_MW08.Views.CustomIndicatorPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:decode2017_MW08.Views;assembly=decode2017_MW08"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="非表示" />
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Button Text="表示" />
+        </StackLayout>
+        <!--<controls:CustomIndicator IsVisible="{Binding IsBusy}" />-->
+    </Grid>
+</ContentPage>

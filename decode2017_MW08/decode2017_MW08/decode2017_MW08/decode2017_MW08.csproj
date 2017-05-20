@@ -41,6 +41,7 @@
     </Compile>
     <Compile Include="Controls\GrowImageGrid.cs" />
     <Compile Include="Extensions\ImageResourceExtension.cs" />
+    <Compile Include="Interfaces\IBeacapp.cs" />
     <Compile Include="Interfaces\IHtmlPath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\CustomEditorPageViewModel.cs" />

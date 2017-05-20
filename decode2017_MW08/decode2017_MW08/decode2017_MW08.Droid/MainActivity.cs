@@ -8,6 +8,8 @@ using Android.Widget;
 using Android.OS;
 using Prism.Unity;
 using Microsoft.Practices.Unity;
+using decode2017_MW08.Interfaces;
+using decode2017_MW08.Droid.Platforms;
 
 namespace decode2017_MW08.Droid
 {
@@ -30,7 +32,7 @@ namespace decode2017_MW08.Droid
     {
         public void RegisterTypes(IUnityContainer container)
         {
-
+            container.RegisterType(typeof(IBeacapp), typeof(Beacapp_Droid));
         }
     }
 }

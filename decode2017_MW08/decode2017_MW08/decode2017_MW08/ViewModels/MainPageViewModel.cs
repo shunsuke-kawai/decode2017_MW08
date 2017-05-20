@@ -1,12 +1,37 @@
-﻿using Prism.Mvvm;
+﻿using decode2017_MW08.Interfaces;
+using Prism.Mvvm;
+using Xamarin.Forms;
 
 namespace decode2017_MW08.ViewModels
 {
     public class MainPageViewModel : BindableBase
     {
-        public MainPageViewModel()
-        {
+        /// <summary>
+        /// Beacapp
+        /// </summary>
+        private readonly IBeacapp _beacapp;
 
+        public MainPageViewModel(IBeacapp beacapp)
+        {
+            _beacapp = beacapp;
+            if (Device.RuntimePlatform == Device.Android && _beacapp != null)
+            {
+                _beacapp.eventUpdateCallback += (responseCode) =>
+                {
+                    if (responseCode == BeacappResponceCode.SUCCESS)
+                    {
+                        _beacapp.StartScan();
+                    }
+                };
+
+                _beacapp.fireEventCallback += (fireEvent) => { };
+
+                BeacappResponceCode initResponseCOde = _beacapp.InitializeBeacapp("2YX1DUCKF8VLYSMICUJB", "KoilTUQLXhCsp1OtgjCnIBINexo=");
+                if (initResponseCOde == BeacappResponceCode.SUCCESS)
+                {
+                    var result = _beacapp.updateEvent();
+                }
+            }
         }
     }
 }

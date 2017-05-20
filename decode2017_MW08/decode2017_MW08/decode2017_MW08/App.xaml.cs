@@ -21,6 +21,7 @@ namespace decode2017_MW08
             Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigation<PrismMasterDetailPage>();
             Container.RegisterTypeForNavigation<MasterPage>();
+            Container.RegisterTypeForNavigation<GrowImagePage>();
             Container.RegisterTypeForNavigation<CustomIndicator>();
         }
     }

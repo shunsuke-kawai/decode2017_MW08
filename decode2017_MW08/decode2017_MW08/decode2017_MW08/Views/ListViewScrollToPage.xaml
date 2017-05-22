@@ -14,8 +14,6 @@
             CommandParameter="さ"
             Text="さ行までスクロール" />
         <ListView
-            GroupDisplayBinding="{Binding Title, StringFormat='{0}行'}"
-            GroupShortNameBinding="{Binding Title}"
             IsGroupingEnabled="True"
             ItemsSource="{Binding GroupedItems}">
             <ListView.Behaviors>
@@ -23,9 +21,27 @@
             </ListView.Behaviors>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" />
+                    <ViewCell>
+                        <StackLayout>
+                            <Label
+                                Margin="20,5"
+                                FontSize="Large"
+                                Text="{Binding Name}"
+                                TextColor="#0078D7" />
+                        </StackLayout>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
+            <ListView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label
+                            Margin="10,5"
+                            FontSize="Large"
+                            Text="{Binding Title, StringFormat='{0}行'}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.GroupHeaderTemplate>
         </ListView>
     </StackLayout>
 </ContentPage>

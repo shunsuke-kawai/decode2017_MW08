@@ -6,6 +6,8 @@ using Foundation;
 using UIKit;
 using Prism.Unity;
 using Microsoft.Practices.Unity;
+using decode2017_MW08.Interfaces;
+using JMAS.MicrosoftDeCode2017.iOS.Platforms;
 
 namespace decode2017_MW08.iOS
 {
@@ -35,7 +37,7 @@ namespace decode2017_MW08.iOS
     {
         public void RegisterTypes(IUnityContainer container)
         {
-
+            container.RegisterType(typeof(IBeacapp), typeof(Beacapp_iOS));
         }
     }
 

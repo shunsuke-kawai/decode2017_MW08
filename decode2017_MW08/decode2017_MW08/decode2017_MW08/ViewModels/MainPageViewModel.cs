@@ -14,7 +14,7 @@ namespace decode2017_MW08.ViewModels
         public MainPageViewModel(IBeacapp beacapp)
         {
             _beacapp = beacapp;
-            if (Device.RuntimePlatform == Device.Android && _beacapp != null)
+            if (Device.RuntimePlatform != Device.Windows && _beacapp != null)
             {
                 _beacapp.eventUpdateCallback += (responseCode) =>
                 {
@@ -26,7 +26,7 @@ namespace decode2017_MW08.ViewModels
 
                 _beacapp.fireEventCallback += (fireEvent) => { };
 
-                BeacappResponceCode initResponseCOde = _beacapp.InitializeBeacapp("2YX1DUCKF8VLYSMICUJB", "KoilTUQLXhCsp1OtgjCnIBINexo=");
+                BeacappResponceCode initResponseCOde = _beacapp.InitializeBeacapp("ActivationKey", "SecretKey");
                 if (initResponseCOde == BeacappResponceCode.SUCCESS)
                 {
                     var result = _beacapp.updateEvent();

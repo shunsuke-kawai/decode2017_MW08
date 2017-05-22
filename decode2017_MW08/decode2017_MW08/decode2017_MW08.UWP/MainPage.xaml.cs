@@ -1,19 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Prism.Unity;
+﻿using decode2017_MW08.Interfaces;
+using decode2017_MW08.UWP.Platforms;
 using Microsoft.Practices.Unity;
+using Prism.Unity;
 
 namespace decode2017_MW08.UWP
 {
@@ -31,7 +19,7 @@ namespace decode2017_MW08.UWP
     {
         public void RegisterTypes(IUnityContainer container)
         {
-
+            container.RegisterType(typeof(IBeacapp), typeof(Beacapp_UWP));
         }
     }
 

@@ -11,7 +11,10 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <ListView HorizontalOptions="FillAndExpand" ItemsSource="{Binding ItemsSource}">
+        <ListView
+            HorizontalOptions="FillAndExpand"
+            ItemSelected="ListView_ItemSelected"
+            ItemsSource="{Binding ItemsSource}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -36,6 +39,16 @@
                 <Effect x:FactoryMethod="Resolve">
                     <x:Arguments>
                         <x:String>Xamarin.ListViewHasNoHighlightEffect</x:String>
+                    </x:Arguments>
+                </Effect>
+                <Effect x:FactoryMethod="Resolve">
+                    <x:Arguments>
+                        <x:String>Xamarin.ListViewDisableScrollEffect</x:String>
+                    </x:Arguments>
+                </Effect>
+                <Effect x:FactoryMethod="Resolve">
+                    <x:Arguments>
+                        <x:String>Xamarin.ListViewDisableClickAndHoverEffect</x:String>
                     </x:Arguments>
                 </Effect>
             </ListView.Effects>

@@ -17,6 +17,7 @@ namespace decode2017_MW08.ViewModels
             "CustomIndicatorPage",
             "GrowImagePage",
             "BeahatPage",
+            "ListViewScrollToPage",
         };
 
         public PrismMasterDetailPageViewModel(INavigationService navigationService)

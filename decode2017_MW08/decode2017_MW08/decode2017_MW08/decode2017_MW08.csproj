@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Behaviors\ScrollToBehavior.cs" />
     <Compile Include="Controls\CustomEditor.cs" />
     <Compile Include="Controls\CustomIndicator.xaml.cs">
       <DependentUpon>CustomIndicator.xaml</DependentUpon>
@@ -49,6 +50,7 @@
     <Compile Include="ViewModels\GrowImagePageViewModel.cs" />
     <Compile Include="ViewModels\CustomIndicatorPageViewModel.cs" />
     <Compile Include="ViewModels\ListViewHasNoHightlightPageViewModel.cs" />
+    <Compile Include="ViewModels\ListViewScrollToPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\PrismMasterDetailPageViewModel.cs" />
     <Compile Include="Views\CustomEditorPage.xaml.cs">
@@ -65,6 +67,9 @@
     </Compile>
     <Compile Include="Views\ListViewHasNoHightlightPage.xaml.cs">
       <DependentUpon>ListViewHasNoHightlightPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListViewScrollToPage.xaml.cs">
+      <DependentUpon>ListViewScrollToPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
@@ -177,6 +182,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ListViewHasNoHightlightPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ListViewScrollToPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

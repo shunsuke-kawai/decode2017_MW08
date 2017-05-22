@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="decode2017_MW08.Views.ListViewScrollToPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:decode2017_MW08.Behaviors;assembly=decode2017_MW08"
+    xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+    Title="ListViewScrollToPage"
+    prism:ViewModelLocator.AutowireViewModel="True">
+    <StackLayout>
+        <Button
+            Margin="20"
+            Command="{Binding ScrollToCommand}"
+            CommandParameter="さ"
+            Text="さ行までスクロール" />
+        <ListView
+            GroupDisplayBinding="{Binding Title, StringFormat='{0}行'}"
+            GroupShortNameBinding="{Binding Title}"
+            IsGroupingEnabled="True"
+            ItemsSource="{Binding GroupedItems}">
+            <ListView.Behaviors>
+                <behaviors:ScrollToBehavior ScrollToItem="{Binding ScrollToGroup}" />
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

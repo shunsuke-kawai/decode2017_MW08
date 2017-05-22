@@ -26,6 +26,7 @@ namespace decode2017_MW08
             Container.RegisterTypeForNavigation<ListViewHasNoHightlightPage>();
             Container.RegisterTypeForNavigation<CustomEditorPage>();
             Container.RegisterTypeForNavigation<BeahatPage>();
+            Container.RegisterTypeForNavigation<ListViewScrollToPage>();
         }
     }
 }

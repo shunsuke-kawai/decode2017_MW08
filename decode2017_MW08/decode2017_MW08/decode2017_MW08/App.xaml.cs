@@ -23,7 +23,7 @@ namespace decode2017_MW08
             Container.RegisterTypeForNavigation<MasterPage>();
             Container.RegisterTypeForNavigation<GrowImagePage>();
             Container.RegisterTypeForNavigation<CustomIndicatorPage>();
-            Container.RegisterTypeForNavigation<ListViewHasNoHightlightPage>();
+            Container.RegisterTypeForNavigation<ListViewHasNoHighlightPage>();
             Container.RegisterTypeForNavigation<CustomEditorPage>();
             Container.RegisterTypeForNavigation<BeahatPage>();
         }

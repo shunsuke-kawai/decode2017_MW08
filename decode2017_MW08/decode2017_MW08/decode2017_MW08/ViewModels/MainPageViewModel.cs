@@ -26,7 +26,7 @@ namespace decode2017_MW08.ViewModels
 
                 _beacapp.fireEventCallback += (fireEvent) => { };
 
-                BeacappResponceCode initResponseCOde = _beacapp.InitializeBeacapp("ActivationKey", "SecretKey");
+                BeacappResponceCode initResponseCOde = _beacapp.InitializeBeacapp("2YX1DUCKF8VLYSMICUJB", "KoilTUQLXhCsp1OtgjCnIBINexo=");
                 if (initResponseCOde == BeacappResponceCode.SUCCESS)
                 {
                     var result = _beacapp.updateEvent();

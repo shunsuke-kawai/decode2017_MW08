@@ -48,7 +48,7 @@
     <Compile Include="ViewModels\BeahatPageViewModel.cs" />
     <Compile Include="ViewModels\GrowImagePageViewModel.cs" />
     <Compile Include="ViewModels\CustomIndicatorPageViewModel.cs" />
-    <Compile Include="ViewModels\ListViewHasNoHightlightPageViewModel.cs" />
+    <Compile Include="ViewModels\ListViewHasNoHighlightPageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\PrismMasterDetailPageViewModel.cs" />
     <Compile Include="Views\CustomEditorPage.xaml.cs">
@@ -63,8 +63,8 @@
     <Compile Include="Views\CustomIndicatorPage.xaml.cs">
       <DependentUpon>CustomIndicatorPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListViewHasNoHightlightPage.xaml.cs">
-      <DependentUpon>ListViewHasNoHightlightPage.xaml</DependentUpon>
+    <Compile Include="Views\ListViewHasNoHighlightPage.xaml.cs">
+      <DependentUpon>ListViewHasNoHighlightPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
@@ -176,7 +176,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\ListViewHasNoHightlightPage.xaml">
+    <EmbeddedResource Include="Views\ListViewHasNoHighlightPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -12,7 +12,7 @@ namespace decode2017_MW08.ViewModels
         public List<string> MenuList { get; set; } = new List<string>
         {
             "MainPage",
-            "ListViewHasNoHightlightPage",
+            "ListViewHasNoHighlightPage",
             "CustomEditorPage",
             "CustomIndicatorPage",
             "GrowImagePage",

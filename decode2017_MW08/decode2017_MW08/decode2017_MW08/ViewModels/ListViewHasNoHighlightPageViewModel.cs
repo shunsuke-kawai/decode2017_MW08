@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace decode2017_MW08.ViewModels
 {
-    public class ListViewHasNoHightlightPageViewModel : BindableBase
+    public class ListViewHasNoHighlightPageViewModel : BindableBase
     {
         public List<string> ItemsSource { get; } = new List<string>
         {
@@ -15,7 +15,7 @@ namespace decode2017_MW08.ViewModels
             "FFFFF",
         };
 
-        public ListViewHasNoHightlightPageViewModel()
+        public ListViewHasNoHighlightPageViewModel()
         {
 
         }

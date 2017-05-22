@@ -2,9 +2,9 @@
 
 namespace decode2017_MW08.Views
 {
-    public partial class ListViewHasNoHightlightPage : ContentPage
+    public partial class ListViewHasNoHighlightPage : ContentPage
     {
-        public ListViewHasNoHightlightPage()
+        public ListViewHasNoHighlightPage()
         {
             InitializeComponent();
         }

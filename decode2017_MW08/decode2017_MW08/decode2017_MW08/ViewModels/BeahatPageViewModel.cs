@@ -90,6 +90,32 @@ namespace decode2017_MW08.ViewModels
             Rssi = "Rssi:";
             Distance = "Distance:";
 
+            // Bluetoothの有無確認
+            if (!_beahat.BluetoothIsAvailableOnThisDevice())
+            {
+                await _pageDialogService.DisplayAlertAsync("", "お使いの端末は Bluetooth に対応していません。", "OK");
+                return;
+            }
+
+            // Bluetoothのオンオフ確認
+            if (!_beahat.BluetoothIsEnableOnThisDevice())
+            {
+                if (Device.RuntimePlatform == Device.Windows)
+                {
+                    await _pageDialogService.DisplayAlertAsync("", "Bluetooth が OFF になっています。", "OK");
+                }
+                else
+                {
+                    var isOK = await _pageDialogService.DisplayAlertAsync("", "Bluetooth が OFF になっています。\n設定画面を表示しますか？", "はい", "いいえ");
+                    if (isOK)
+                    {
+                        _beahat.RequestUserToTurnOnBluetooth();
+                    }
+                }
+
+                return;
+            }
+
             _beahat.StartScan();
 
             await Task.Delay(3000);

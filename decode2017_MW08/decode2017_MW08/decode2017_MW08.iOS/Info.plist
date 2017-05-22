@@ -48,5 +48,11 @@
     </array>
     <key>UILaunchStoryboardName</key>
     <string>LaunchScreen</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>ビーコン検知に使用します。</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>ビーコン検知に使用します。</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>ビーコン検知に使用します。</string>
   </dict>
 </plist>

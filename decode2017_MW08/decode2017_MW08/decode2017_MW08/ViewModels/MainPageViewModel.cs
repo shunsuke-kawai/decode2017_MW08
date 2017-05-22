@@ -14,7 +14,7 @@ namespace decode2017_MW08.ViewModels
         public MainPageViewModel(IBeacapp beacapp)
         {
             _beacapp = beacapp;
-            if (Device.RuntimePlatform == Device.Android && _beacapp != null)
+            if (Device.RuntimePlatform != Device.Windows && _beacapp != null)
             {
                 _beacapp.eventUpdateCallback += (responseCode) =>
                 {
